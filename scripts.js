@@ -1,13 +1,15 @@
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
+    var line2 = document.getElementById('line2');
+    var input = document.getElementById('input');
+  
     setTimeout(function() {
-      var textLine1 = document.querySelector('.line-1');
-      var textLine2 = document.querySelector('.line-2');
+      line2.style.display = 'none';
+      input.style.display = 'block';
+    }, 10000); // Adjust this value to match the duration of your CSS animations
   
-      // Move the first line up by 15px
-      var currentBottom = parseInt(window.getComputedStyle(textLine1).bottom, 10);
-      textLine1.style.bottom = (currentBottom + 15) + 'px';
-  
-      // Show the second line
-      textLine2.style.opacity = '1';
-    }, 5000);
-  };
+    input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && input.value.toLowerCase() === 'yes') {
+          window.location.href = 'landing.html'; // replace with the URL of your new page
+        }
+      });
+  });
