@@ -1,37 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .left-side-caption {
+  position: absolute;
+  left: 0;
   font-family: 'Poppins', sans-serif;
   font-size: 50px;
   color: #cd2400;
+  display: flex;
   margin-left: 20px;
 }
-
 .left-side-caption:first-child {
   margin-bottom: 85px;
 }
-
-.right-side-image {
-  height: 100%;
-  width: auto;
-}
-
-@media (max-width: 600px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .right-side-image {
-    order: -1;
-  }
-}
-
 body {
     margin: 0;
     overflow: hidden;
@@ -41,7 +21,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    animation: breathing 6s infinite;
   }
  /* 
   .terminal {
@@ -55,6 +34,12 @@ body {
     animation: distortText 6s infinite;
   }
 */
+  .right-side-image {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: auto;
+  }
 
   .bottom-left-text {
     position: fixed;
