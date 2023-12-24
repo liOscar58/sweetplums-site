@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
       input.style.display = 'block';
     }, 10000); // Adjust this value to match the duration of your CSS animations
   
-    input.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter' && input.value.toLowerCase() === 'yes') {
-          window.location.href = 'landing.html'; // replace with the URL of your new page
-        }
-      });
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && input.value.toLowerCase() === 'yes') {
+        window.location.href = 'landing.html'; 
+      }
+    });
   });
