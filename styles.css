@@ -42,38 +42,3 @@ body {
     width: auto;
   }
 
-  .bottom-left-text {
-    position: fixed;
-    bottom: 10px;
-    left: 20px;
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    color: #cd2400;
-  }
-
-  .bottom-left-text#input {
-    color: #cd2400;
-    background-color: transparent; 
-    border: none;
-  }
-  @keyframes disappear {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-  }
-  
-  @keyframes flash {
-    0%, 20% {opacity: 0;}
-    25%, 75% {opacity: 1;}
-    80%, 100% {opacity: 0;}
-  }
-  
-  
-  .disappear {
-    animation: disappear 5s ease-in-out forwards;
-  }
-  
-  .flash {
-    opacity: 0;
-    animation: flash 1s ease-in-out infinite, disappear 6s ease-in-out forwards;
-    animation-delay: 2s;
-  }
